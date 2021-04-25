@@ -14,7 +14,7 @@ void loop() {
    if(hareket == HIGH){
 mySwitch.switchOn("11111", "00010");
    }
-  else(hareket == LOW){   
+  else if(hareket == LOW){   
 mySwitch.switchOff("11111", "00010");
 }
 }sonHareket = hareket;
