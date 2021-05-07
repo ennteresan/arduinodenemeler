@@ -4,7 +4,6 @@
 // Use pin 2 as wake up pin
 const int wakeUpPin = 2;
 int hareket;
-int sonHareket=0;
 RCSwitch mySwitch = RCSwitch();
 void wakeUp()
 {
@@ -36,15 +35,12 @@ void loop()
     // Do something here
     // Example: Read sensor, data logging, data transmission.
       hareket = digitalRead(wakeUpPin);
-      if (hareket != sonHareket){
         if(hareket == HIGH){
           mySwitch.switchOn("11111", "00010");
           }
         else if(hareket == LOW){   
           mySwitch.switchOff("11111", "00010");
           }
-      }
-      sonHareket = hareket;
       delay(100);
     
 }
